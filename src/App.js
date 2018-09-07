@@ -5,14 +5,29 @@ import './App.css';
 import { contacts } from './contacts';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state= {
+      contacts: contacts,
+      searchfield: ''
+    }
+  }
+
+  onSearchChange= (event) => {
+    this.setState({ searchfield: event.target.value });
+  }
+
   render() {
+    const filteredContacts = this.state.contacts.filter(contact => {
+      return contact.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+    })
     return (
       <div className="tc">
         <header>
           <h1>Contact List</h1>
         </header>
         <p>Search for a contact from the list below:</p>
-        <SearchBox />
+        <SearchBox searchChange={this.onSearchChange} />
 
         <div class="pa4">
           <div class="overflow-auto">
@@ -27,7 +42,7 @@ class App extends Component {
                   <th class="fw6 tl pa3 bg-white">Email</th>
                 </tr>
               </thead>
-                <ContactList contacts={contacts} />
+                <ContactList contacts={filteredContacts} />
             </table>
           </div>
         </div>
