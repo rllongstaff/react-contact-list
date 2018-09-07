@@ -23,7 +23,7 @@ class App extends Component {
     })
     return (
       <div className="tc">
-        <header>
+        <header className="bg-light-blue pa3">
           <h1>Contact List</h1>
         </header>
         <p>Search for a contact from the list below:</p>
@@ -46,6 +46,9 @@ class App extends Component {
             </table>
           </div>
         </div>
+        <footer className="bg-blue pa3">
+          <p>&copy;2018 Russell Longstaff;</p>
+        </footer>
       </div>
     );
   }
