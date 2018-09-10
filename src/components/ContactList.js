@@ -8,10 +8,9 @@ const ContactList = ({ contacts }) => {
                 key={contacts[i].id}
                 id={contacts[i].id}
                 name={contacts[i].name}
-                ext={contacts[i].ext}
-                telephone={contacts[i].telephone}
-                dept={contacts[i].dept}
-                title={contacts[i].title}
+                phone={contacts[i].phone}
+                dept={contacts[i].address.suite}
+                username={contacts[i].username}
                 email={contacts[i].email}
             />
         );

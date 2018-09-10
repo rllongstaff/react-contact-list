@@ -47,16 +47,13 @@ class App extends Component {
                   <thead>
                     <tr className="stripe-dark">
                       <th className="fw6 tl pa3 bg-white">Name</th>
-                      <th className="fw6 t1 pa3 bg-white">Ext</th>
-                      <th className="fw6 tl pa3 bg-white">Direct Line</th>
-                      <th className="fw6 t1 pa3 bg-white">Department</th>
-                      <th className="fw6 tl pa3 bg-white">Title</th>                  
+                      <th className="fw6 tl pa3 bg-white">Phone</th>
+                      <th className="fw6 tl pa3 bg-white">Address Suite</th>
+                      <th className="fw6 tl pa3 bg-white">Username</th>                  
                       <th className="fw6 tl pa3 bg-white">Email</th>
                     </tr>
                   </thead>
-              
-                      <ContactList contacts={filteredContacts} />
-
+                    <ContactList contacts={filteredContacts} />
                 </table>
               </div>
             </div>
