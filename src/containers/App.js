@@ -35,8 +35,8 @@ class App extends Component {
     } else {
       return (
         <div className="tc">
-          <header className="bg-light-blue pa3">
-            <h1>Contact List</h1>
+          <header className="bg-light-blue pa3 header">
+            <h1 className="washed-blue f1">Contact List</h1>
           </header>
           <p>Search for a contact from the list below:</p>
           <SearchBox searchChange={this.onSearchChange} />
@@ -58,8 +58,8 @@ class App extends Component {
               </div>
             </div>
           </Scroll>          
-          <footer className="bg-blue pa3">
-            <p>&copy;2018 Russell Longstaff;</p>
+          <footer className="bg-blue pa3 footer">
+            <p className="lightest-blue">&copy;2018 Russell Longstaff;</p>
           </footer>
         </div>
       );
