@@ -17,7 +17,7 @@ const ContactList = ({ contacts }) => {
         );
     })
     return (
-        <tbody class="lh-copy">
+        <tbody className="lh-copy">
             {contactsArray}
         </tbody>        
     );
